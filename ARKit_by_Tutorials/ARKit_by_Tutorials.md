@@ -314,3 +314,107 @@ let scene = SCNScene(named: "PokerDice.scnassets/SimpleScene.scn")!
 
 #### 挑战
 
+
+
+## 3-Basic Session Management
+
+
+
+![](https://ws2.sinaimg.cn/large/006tNc79gy1fzsyqi19i9j30q00n4ju2.jpg)
+
+### Starting an AR session
+
+
+
+#### configuration
+
+##### 3DOF
+
+`AROrientationTrackingConfiguration`  
+
+ **Pitch**, **Roll** and **Yaw**
+
+rotation around the X-, Y- and Z-axes
+
+![](https://ws3.sinaimg.cn/large/006tNc79gy1fzsyyxcd1dj30ra09wdg7.jpg)
+
+##### 6DOF
+
+`ARWorldTrackingConfiguration`  
+
+**Sway**, **Heave** and **Surge**
+
+movement parallel to the X-, Y- and Z- axes
+
+![image-20190203091957485](/Users/andyron/Library/Application Support/typora-user-images/image-20190203091957485.png)
+
+##### **Checking device capabilities**
+
+
+
+```swift
+let config = ARWorldTrackingConfiguration()
+config.worldAlignment = .gravity
+config.providesAudioData = false
+```
+
+
+
+#### Runing the session
+
+
+
+### Controlling an AR session
+
+
+
+**暂停：** `ARSession.pause()`
+
+**重启：** `ARSession.run()`
+
+**更新：** `ARSession.run(ARSessionConfig)`
+
+
+
+### 更新状态信息
+
+
+
+### **Handling AR session errors**
+
+
+
+### Handing AR session state changes
+
+
+
+```swift
+func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+    switch camera.trackingState {
+        case .notAvailable:
+        trackingStatus = "Tracking: Not Available!"
+        case .normal:
+        trackingStatus = "Tracking: All Good"
+        case .limited(let reason):
+        switch reason {
+            case .excessiveMotion:
+            trackingStatus = "Tracking: Limited due to excessive motion!"
+            case .insufficientFeatures:
+            trackingStatus = "Tracking: Limited duo to insufficient features!"
+            case .initializing:
+            trackingStatus = "Tracking: Initializing..."
+            case .relocalizing:
+            trackingStatus = "Tracking: Relocalizing..."
+        }
+    }
+}
+```
+
+
+
+**Tracking: Limited due to insufficient features!**: Put your finger over the camera, and this status will appear. Remove your finger, and it should return to **Tracking: All Good!** 
+
+### debug options
+
+
+
