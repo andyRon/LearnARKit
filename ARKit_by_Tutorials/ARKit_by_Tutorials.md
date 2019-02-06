@@ -418,3 +418,150 @@ func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera
 
 
 
+## 4-Adding 3D Objects & Textures
+
+
+
+### 3D Objects
+
+
+
+**COLLADA** is a popular file format for 3D models, and Xcode fully understands how to work with and import this format. 
+
+
+
+Although Xcode fully understands the COLLADA format, the models are not yet in
+Xcode’s native SceneKit format. You’ll need to convert the models into Xcode’s native
+SceneKit format before you can use them.
+
+
+
+ **Editor** **▸** **Convert to SceneKit scene file format(.scn)**
+
+
+
+### Creating the dice scene
+
+**DiceScene.scn**
+
+五个每一个x轴间隔0.1
+
+
+
+### Shaders,materials and textures 明暗 材料 纹理
+
+
+
+The available lighting model shaders available in SceneKit are:
+
+![image-20190206092134259](https://ws2.sinaimg.cn/large/006tNc79gy1fzwfxn07i1j30s607476k.jpg)
+
+ 
+
+types of materials like water, leather, wood and rock
+
+![image-20190206092740904](/Users/andyron/Library/Application Support/typora-user-images/image-20190206092740904.png)
+
+
+
+**texture coordinate**
+
+ color, specularity, reflectivity, shininess, roughness, metalness and even
+transparency.
+
+![image-20190206093646174](/Users/andyron/Library/Application Support/typora-user-images/image-20190206093646174.png)
+
+
+
+### Physically based rendering(PBR)
+
+
+
+#### Enviroment map
+
+
+
+**cub maps**
+
+
+
+**horizontal strip**
+
+![image-20190206103500299](/Users/andyron/Library/Application Support/typora-user-images/image-20190206103500299.png)
+
+
+
+#### Diffuse map
+
+
+
+#### Normal map
+
+
+
+#### Height map
+
+
+
+#### Occlusion map
+
+
+
+#### Emission map
+
+
+
+#### Self-illumination map
+
+
+
+#### Displacment map
+
+
+
+#### Metalness and roughness maps
+
+
+
+#### Metalness map
+
+
+
+#### Roughness map
+
+
+
+#### **PBR Earth project**
+
+
+
+### Texturing the 3D Objects
+
+
+
+**Scene inspector**
+
+
+
+**Material inspector**
+
+
+
+五个不同风格
+
+### Loading 3D Objects
+
+
+
+### Placing 3D Objects
+
+
+
+### Challenge
+
+??
+
+
+
+
+
