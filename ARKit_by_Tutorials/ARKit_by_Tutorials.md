@@ -610,3 +610,97 @@ config.planeDetection = .horizontal
 ### Challenge 
 
 ??
+
+
+
+## 6-Adding Physics
+
+
+
+### 开始
+
+
+
+#### The physics body
+
+`SCNPhysicsBody`
+
+static
+
+dynamic
+
+kinematic
+
+
+
+#### The physics shape
+
+![image-20190207154449365](/Users/andyron/Library/Application Support/typora-user-images/image-20190207154449365.png)
+
+
+
+#### Other physical properties
+
+
+
+![image-20190207154607456](/Users/andyron/Library/Application Support/typora-user-images/image-20190207154607456.png)
+
+
+
+### Adding physics
+
+
+
+**Physics Inspector**
+
+
+
+**Bounding Box**
+
+
+
+#### Controlling the physics world speed
+
+
+
+#### Controlling the physics simulation speed
+
+
+
+#### **Recovering fallen dice**
+
+
+
+### Plane physics
+
+
+
+### Randomizing rotation
+
+
+
+### Force
+
+
+
+### Lights and shadows
+
+
+
+#### Adding a shadow-casting light
+
+??
+
+#### Light estimation
+
+
+
+### Wrapping things up
+
+
+
+### Hit testing
+
+
+
+### Challenge
